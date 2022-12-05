@@ -1,0 +1,206 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.event.PopupMenuEvent.*;
+
+public class pizzas extends JFrame implements ActionListener
+{
+    JFrame j;
+    JLabel l1,l2,l3,l4,l5,l6,l7,l8,l9,l10,l11,l12,l70,l14;
+    JButton b,b1;
+    JTextField t1,t2,t3,t4,t5,t6;
+    pizzas()
+    {
+        j = new JFrame("CREAM CENTRE");
+        j.setVisible(true);
+        j.setLayout(null);
+        j.setBounds(250, 90, 800, 500);
+        j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        JPanel p = new JPanel();
+        p.setBounds(0, 0, 200, 500);
+        p.setBackground(Color.gray);
+        j.add(p);
+
+
+        JLabel l = new JLabel("CREAM");
+        JLabel l0 = new JLabel("CENTER");
+        l.setLocation(50,100);
+        l0.setBounds(75, 280, 40, 100);
+        p.add(l,BorderLayout.NORTH);
+        p.add(l0);
+
+        JLabel l1 = new JLabel("PIZZAS:");
+        j.add(l1);
+        l1.setBounds(210,20,85,20);
+
+        JLabel l2 = new JLabel("-> CLASSIC MARGHERITA");
+        j.add(l2);
+        l2.setBounds(210, 60, 250, 20);
+
+        JLabel l3 = new JLabel("-> OLIVIN IT PIZZA");
+        j.add(l3);
+        l3.setBounds(210, 100, 250, 20);
+
+        JLabel l4 = new JLabel("-> PEPPY PANEER");
+        j.add(l4);
+        l4.setBounds(210, 140, 250, 20);
+
+        JLabel l5 = new JLabel("-> THIN CRUST VERDURE PIZZA");
+        j.add(l5);
+        l5.setBounds(210, 180, 250, 20);
+
+        JLabel l6 = new JLabel("-> BLACK HOLE PIZZA");
+        j.add(l6);
+        l6.setBounds(210, 220, 250, 20);
+
+        JLabel l70 = new JLabel("-> CHEESE CORN CAPSICUM");
+        j.add(l70);
+        l70.setBounds(210, 260, 250, 20);
+
+        JLabel l7 = new JLabel("RATES:");
+        j.add(l7);
+        l7.setBounds(460,20,85,20);
+
+        JLabel l8 = new JLabel("200");
+        j.add(l8);
+        l8.setBounds(460,60,45,20);
+
+        JLabel l9 = new JLabel("280");
+        j.add(l9);
+        l9.setBounds(460,100,45,20);
+
+        JLabel l10 = new JLabel("300");
+        j.add(l10);
+        l10.setBounds(460,140,45,20);
+
+        JLabel l11 = new JLabel("360");
+        j.add(l11);
+        l11.setBounds(460,180,45,20);
+
+        JLabel l12 = new JLabel("350");
+        j.add(l12);
+        l12.setBounds(460,220,45,20);
+
+        JLabel l13 = new JLabel("160");
+        j.add(l13);
+        l13.setBounds(460,260,45,20);
+
+        JLabel l14 = new JLabel("ADD ONS:");
+        j.add(l14);
+        l14.setBounds(600,20,85,20);
+
+        t1 = new JTextField();
+        t1.setBounds(600,60,100,20);
+        t1.setBackground(Color.white);
+        j.add(t1);
+        t1.setVisible(true);
+
+        t2 = new JTextField();
+        t2.setBounds(600,100,100,20);
+        t2.setBackground(Color.white);
+        j.add(t2);
+        t2.setVisible(true);
+
+        t3 = new JTextField();
+        t3.setBounds(600,140,100,20);
+        t3.setBackground(Color.white);
+        j.add(t3);
+        t3.setVisible(true);
+
+        t4 = new JTextField();
+        t4.setBounds(600,180,100,20);
+        t4.setBackground(Color.white);
+        j.add(t4);
+        t4.setVisible(true);
+
+        t5 = new JTextField();
+        t5.setBounds(600,220,100,20);
+        t5.setBackground(Color.white);
+        j.add(t5);
+        t5.setVisible(true);
+
+        t6 = new JTextField();
+        t6.setBounds(600,260,100,20);
+        t6.setBackground(Color.white);
+        j.add(t6);
+        t6.setVisible(true);
+
+        JButton b3 = new JButton("+");
+        b3.setBounds(700,60,50,20);
+        j.add(b3);
+
+        JButton b4 = new JButton("-");
+        b4.setBounds(560,60,40,20);
+        j.add(b4);
+
+        b = new JButton("<< BACK TO HOME");
+        b.setBounds(210,430,180,20);
+        j.add(b);
+
+        b1 = new JButton("PLACE ORDER >> ");
+        j.add(b1);
+        b1.setBounds(550,430,180,20);
+
+        JButton b5 = new JButton("+");
+        b5.setBounds(700,100,50,20);
+        j.add(b5);
+
+        JButton b6 = new JButton("-");
+        b6.setBounds(560,100,40,20);
+        j.add(b6);
+
+        JButton b7 = new JButton("+");
+        b7.setBounds(700,140,50,20);
+        j.add(b7);
+
+        JButton b8 = new JButton("-");
+        b8.setBounds(560,140,40,20);
+        j.add(b8);
+
+        JButton b9 = new JButton("+");
+        b9.setBounds(700,180,50,20);
+        j.add(b9);
+
+        JButton b10 = new JButton("-");
+        b10.setBounds(560,180,40,20);
+        j.add(b10);
+
+        JButton b11 = new JButton("+");
+        b11.setBounds(700,220,50,20);
+        j.add(b11);
+
+        JButton b12 = new JButton("-");
+        b12.setBounds(560,220,40,20);
+        j.add(b12);
+
+        JButton b13 = new JButton("+");
+        b13.setBounds(700,260,50,20);
+        j.add(b13);
+
+        JButton b14 = new JButton("-");
+        b14.setBounds(560,260,40,20);
+        j.add(b14);
+
+        b1.addActionListener(this);
+        b.addActionListener(this);
+    }
+    @Override
+    public void actionPerformed(ActionEvent e)
+    {
+        if(e.getSource()==b)
+        {
+            home_page h = new home_page();
+            h.setVisible(true);
+            dispose();
+        }
+        if(e.getSource()==b1)
+        {
+            System.exit(0);
+        }
+    }
+    public static void main(String[] args) {
+        pizzas p = new pizzas();
+    }
+}
