@@ -148,19 +148,27 @@ public class home_page extends JFrame implements ActionListener
     }
     if(e.getSource()==b9)
     {
-
+     Desserts d = new Desserts();
+     d.setVisible(true);
+     dispose();
     }
     if(e.getSource()==b10)
     {
-
+      mocktails m1 = new mocktails();
+      m1.setVisible(true);
+      dispose();
     }
     if(e.getSource()==b11)
     {
-
+      milkshakes m = new milkshakes();
+      m.setVisible(true);
+      dispose();
     }
     if(e.getSource()==b12)
     {
-
+     juices j = new juices();
+     j.setVisible(true);
+     dispose();
     }
   }
   public static void main(String[] args)
