@@ -13,7 +13,7 @@ public class home_page extends JFrame implements ActionListener
       j = new JFrame("CREAM CENTRE");
       j.setVisible(true);
       j.setLayout(null);
-      j.setBounds(250, 90, 740, 500);
+      j.setBounds(250, 90, 800, 500);
       j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
       JPanel p = new JPanel();
@@ -80,6 +80,10 @@ public class home_page extends JFrame implements ActionListener
       j.add(b12);
       b12.setBounds(620, 190, 80, 30);
 
+      Date d = new Date();
+      int a = d.getDate();
+
+
       b1.addActionListener(this);
       b2.addActionListener(this);
       b3.addActionListener(this);
@@ -92,6 +96,7 @@ public class home_page extends JFrame implements ActionListener
       b10.addActionListener(this);
       b11.addActionListener(this);
       b12.addActionListener(this);
+
     }
   @Override
   public void actionPerformed(ActionEvent e) {
@@ -102,32 +107,60 @@ public class home_page extends JFrame implements ActionListener
     }
     if(e.getSource()== b2)
     {
-
+    main_course m = new main_course();
+    m.setVisible(true);
+    dispose();
     }
     if(e.getSource()==b3)
     {
-
+      sandwiches s = new sandwiches();
+      s.setVisible(true);
+      dispose();
     }
     if(e.getSource()==b4)
     {
-
+      soup s = new soup();
+      s.setVisible(true);
+      dispose();
     }
     if(e.getSource()== b5)
     {
-
+    pasta p = new pasta();
+    p.setVisible(true);
+    dispose();
     }
     if(e.getSource()== b6)
     {
-
+    chinese c = new chinese();
+    c.setVisible(true);
+    dispose();
     }
     if(e.getSource()== b7)
     {
-
+    mexican m = new mexican();
+    m.setVisible(true);
+    dispose();
     }
     if(e.getSource()== b8)
     {
       pizzas p = new pizzas();
       dispose();
+    }
+    if(e.getSource()==b9)
+    {
+
+    }
+    if(e.getSource()==b10)
+    {
+
+    }
+    if(e.getSource()==b11)
+    {
+
+    }
+    if(e.getSource()==b12)
+    {
+
     }
   }
   public static void main(String[] args)
