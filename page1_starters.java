@@ -1,19 +1,23 @@
+package cafe.stages;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.lang.Integer;
 
 public class starters extends JFrame implements ActionListener
 {
     JFrame j;
     JComboBox cb;
-    JButton b,b1,all,none,selective;
-    JTextField t1,t2,t3,t4,t5,t6,tf;
-    JTextArea a1;
+    JButton b,b1,pl;
+    JTextField t1,t2,t3,t4,t5,t6;
+    JTextArea tf;
 
     JButton b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12,b13;
 
-    starters() {
+    starters()
+    {
         j = new JFrame("CREAM CENTRE");
         j.setVisible(true);
         j.setLayout(null);
@@ -188,23 +192,13 @@ public class starters extends JFrame implements ActionListener
         b1.addActionListener(this);
         b.addActionListener(this);
 
-        all = new JButton("PLACE ALL");
-        j.add(all);
-        all.setBounds(220,310,120,15);
+         pl = new JButton("PLACE ORDER");
+        pl.setBounds(280,300,170,20);
+        j.add(pl);
 
-        none = new JButton("PLACE NONE");
-        j.add(none);
-        none.setBounds(350,310,120,15);
+        pl.addActionListener(this);
 
-        selective = new JButton("PLACED SELECTIVE");
-        j.add(selective);
-        selective.setBounds(480,310,190,15);
-
-        all.addActionListener(this);
-        none.addActionListener(this);
-        selective.addActionListener(this);
-
-        tf = new JTextField("STARTERS BILL");
+        tf = new JTextArea();
         tf.setBounds(220,330,450,80);
         j.add(tf);
 
@@ -213,29 +207,29 @@ public class starters extends JFrame implements ActionListener
     public void actionPerformed(ActionEvent e)
     {
         int n1 = Integer.parseInt(t1.getText());
-        int n2 = Integer.parseInt(t2.getText());
-        int n3 = Integer.parseInt(t3.getText());
-        int n4 = Integer.parseInt(t4.getText());
-        int n5 = Integer.parseInt(t5.getText());
-        int n6 = Integer.parseInt(t6.getText());
 
-        if(e.getSource()== all)
+        if(e.getSource()==pl && n1!=0)
         {
-        tf.setText(String.valueOf(n1*260+n2*280+n3*300+n4*269+n5*220+n6*240));
+//            int n = n1*260 + n2*300 + n3*280;
+            tf.setText("STARTERS BILL:"+ String.valueOf(n1*260));
         }
-        if(e.getSource()== none)
+
+        int n2 = Integer.parseInt(t2.getText());
+        if(e.getSource()==pl && n2!=0)
         {
-            tf.setText(String.valueOf(0));
-        }
-        if(e.getSource()== selective)
-        {
-         tf.setText(String.valueOf(0+n1*260+n2*280+n3*300+n4*269+n5*220+n6*240));
+            tf.setText("STARTERS BILL:"+ String.valueOf(n2*300));
         }
 
         if(e.getSource()==b)
         {
             home_page h = new home_page();
             h.setVisible(true);
+            dispose();
+        }
+        if(e.getSource()==b1)
+        {
+            placement_page p = new placement_page();
+            p.setVisible(true);
             dispose();
         }
     }
